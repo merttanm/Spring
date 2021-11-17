@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<beans>
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans	
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="beanA" name="bean_A, bean_a; BEAN_A BEANA "
+              class="InversionOfControl.domain.BeanA">
+        <property name="beanB" ref="beanB" />
+    </bean>
+
+    <import>beans.xml</import>
+    <import>nestedBeans.xml</import>
+    <import>zeroBeans.xml</import>
+    
+</beans>

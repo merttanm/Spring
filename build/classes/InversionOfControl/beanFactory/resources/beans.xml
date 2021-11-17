@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="beanA" name="bean_A, bean_a, BEAN_A BEAN-A"
+              class="InversionOfControl.domain.BeanA">
+        <property name="beanB" ref="beanB" />
+    </bean>
+
+    <alias name="beanA" alias="a" />
+    <alias name="beanA" alias="aa" />
+
+    <bean id="beanB" class="InversionOfControl.domain.BeanB">
+        <property name="beanC" ref="beanC" />
+    </bean>
+	
+    <bean id="beanB2" class="InversionOfControl.domain.BeanB">
+    </bean>
+
+    <bean id="beanC" class="InversionOfControl.domain.BeanC">
+    </bean>
+
+    <bean id="beanA2" class="InversionOfControl.domain.BeanA">
+        <property name="beanB" ref="beanB" />
+    </bean>
+
+    <bean id="5-beanA*"
+              class="InversionOfControl.domain.BeanA">
+        <property name="beanB" ref="beanB" />
+    </bean>
+
+</beans>
